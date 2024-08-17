@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quote Generator</title>
+    <link rel="stylesheet" href="style.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Roboto:wght@400;700&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <h1>Quote Generator</h1>
+        <nav>
+            <input type="text" id="search" placeholder="Search quotes..." aria-label="Search Quotes">
+            <button id="random-quote">Random Quote</button>
+            <select id="categories" aria-label="Quote Categories">
+                <option value="all">All</option>
+                <option value="Inspirational">Inspirational</option>
+                <option value="Love">Love</option>
+                <option value="Humor">Humor</option>
+                <option value="Motivational">Motivational</option>
+                <option value="Philosophical">Philosophical</option>
+                <option value="Literary">Literary</option>
+                <option value="Historical">Historical</option>
+                <option value="Political">Political</option>
+                <option value="Religious/Spiritual">Religious/Spiritual</option>
+                <option value="Famous">Famous</option>
+                <option value="Wisdom">Wisdom</option>
+                <option value="Self-Help">Self-Help</option>
+            </select>
+        </nav>
+    </header>
+
+    <main>
+        <div id="quote-display">
+            <p id="quote-text">Click 'Random Quote' to begin!</p>
+            <p id="quote-author">- Author</p>
+        </div>
+        <div id="buttons">
+            <button id="next-quote">Next Quote</button>
+            <button id="save-quote">Save Quote</button>
+            <button id="view-saved-quotes">View Saved Quotes</button>
+            <button id="customize">Customize</button>
+        </div>
+
+        <div id="saved-quotes-list" style="display: none;">
+            <button id="close-saved-quotes">✖ Close</button>
+            <h3>Saved Quotes</h3>
+            <ul id="saved-quotes"></ul>
+        </div>
+
+        <div id="theme-select-container" style="display: none;">
+            <h3>Select a Theme</h3>
+            <select id="theme-options" aria-label="Theme Options">
+                <option value="Light">Light</option>
+                <option value="Dark">Dark</option>
+                <option value="Corporate">Corporate</option>
+                <option value="Elegant">Elegant</option>
+                <option value="Modern">Modern</option>
+                <option value="Ocean">Ocean</option>
+                <option value="Forest">Forest</option>
+                <option value="Sunset">Sunset</option>
+                <option value="Slate">Slate</option>
+                <option value="Minimalist">Minimalist</option>
+            </select>
+            <button id="apply-theme">Apply Theme</button>
+        </div>
+    </main>
+
+    <footer>
+        <form id="submit-quote">
+            <input type="text" id="new-quote-text" placeholder="Enter your quote" required aria-label="New Quote Text">
+            <input type="text" id="new-quote-author" placeholder="Author" aria-label="New Quote Author">
+            <input type="text" id="new-quote-category" placeholder="Category" aria-label="New Quote Category">
+            <button type="submit">Submit Quote</button>
+        </form>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
